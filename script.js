@@ -405,18 +405,18 @@ class Game {
         this.bossLives = 10;
         this.restart();
 
-        // // event listeners
-        // window.addEventListener('keydown', e => {
-        //     if (e.key === '1' && !this.fired) this.player.shoot();
-        //     this.fired = true;
-        //     if (this.keys.indexOf(e.key) === -1) this.keys.push(e.key);
-        //      if (e.key === 'r' && this.gameOver) this.restart();
-        // });
-        // window.addEventListener('keyup', e => {
-        //     this.fired = false;
-        //     const index = this.keys.indexOf(e.key);
-        //     if (index > -1) this.keys.splice(index, 1);
-        // });
+         // event listeners
+         window.addEventListener('keydown', e => {
+             if (e.key === '1' && !this.fired) this.player.shoot();
+             this.fired = true;
+             if (this.keys.indexOf(e.key) === -1) this.keys.push(e.key);
+              if (e.key === 'r' && this.gameOver) this.restart();
+         });
+         window.addEventListener('keyup', e => {
+             this.fired = false;
+             const index = this.keys.indexOf(e.key);
+             if (index > -1) this.keys.splice(index, 1);
+         });
         window.removeEventListener('keydown', this.handleKeyDown);
         window.removeEventListener('keyup', this.handleKeyUp);
         }
